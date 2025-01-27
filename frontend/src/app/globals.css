@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light theme colors */
+  --background: #ffffff;
+  --foreground: #000000;
+  --primary: #2563eb;
+  /* Blue 600 */
+  --primary-hover: #1d4ed8;
+  /* Blue 700 */
+  --secondary: #4b5563;
+  /* Gray 600 */
+  --accent: #3b82f6;
+  /* Blue 500 */
+  --muted: #6b7280;
+  /* Gray 500 */
+  --border: #e5e7eb;
+  /* Gray 200 */
+  --input-bg: #ffffff;
+  --input-text: #000000;
+  --error: #ef4444;
+  /* Red 500 */
+  --success: #22c55e;
+  /* Green 500 */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark theme disabled - keeping light theme for consistency */
+    --background: #ffffff;
+    --foreground: #000000;
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --secondary: #4b5563;
+    --accent: #3b82f6;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --input-bg: #ffffff;
+    --input-text: #000000;
+  }
+}
+
+body {
+  color: #000000;
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  /* Make all text medium weight by default */
+}
+
+/* Add custom utility classes for text */
+@layer utilities {
+  .text-bold {
+    @apply font-semibold text-black;
+  }
+
+  .text-label {
+    @apply text-sm font-medium text-black;
+  }
+
+  .text-input {
+    @apply font-medium text-black;
+  }
+
+  .text-button {
+    @apply font-semibold text-black;
+  }
+}
+
+/* Form styles */
+.form-input,
+.form-textarea,
+.form-select,
+.form-multiselect {
+  @apply block w-full rounded-md border shadow-sm;
+  @apply focus:ring-2 focus:ring-offset-2;
+  background-color: white;
+  color: black;
+  border-color: var(--border);
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus,
+.form-multiselect:focus {
+  @apply ring-blue-500 border-blue-500;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply px-4 py-2 rounded-md font-medium text-white;
+  background-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+  @apply px-4 py-2 rounded-md font-medium;
+  color: var(--secondary);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  @apply bg-gray-50;
+}
+
+/* Text styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: black;
+  @apply font-bold;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-lg shadow-sm border;
+  border-color: var(--border);
+  color: black;
+}
+
+/* Link styles */
+.link {
+  color: var(--primary);
+  @apply hover:underline;
+}
+
+/* Error message styles */
+.error-message {
+  @apply bg-red-50 border border-red-400 text-red-700 px-4 py-3 rounded relative;
+}
+
+/* Success message styles */
+.success-message {
+  @apply bg-green-50 border border-green-400 text-green-700 px-4 py-3 rounded relative;
+}
+
+/* Input label styles */
+label {
+  @apply block text-sm font-medium;
+  color: black;
+}
+
+/* Placeholder styles */
+::placeholder {
+  color: #6b7280;
+}

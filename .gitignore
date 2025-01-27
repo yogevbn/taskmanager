@@ -1,0 +1,45 @@
+# Python Backend
+backend/__pycache__/
+backend/*.py[cod]
+backend/*$py.class
+backend/*.so
+backend/.Python
+backend/build/
+backend/dist/
+backend/*.egg-info/
+
+# Next.js Frontend
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/node_modules/
+frontend/.pnp 
+frontend/.pnp.js
+frontend/coverage/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+
+# Virtual Environment
+.venv/
+venv/
+
+
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store 
